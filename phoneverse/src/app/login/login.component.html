@@ -1,0 +1,42 @@
+<!--
+usuario: <input id ="nombre" type="text" [(ngModel)]="usuario">
+contraseña: <input id ="contraseña" type="password" [(ngModel)]="password">
+
+<button (click)="registrarse();">Registrarse</button>
+-->
+
+<body>
+    <div class="container">
+
+        <h2>AUTHORIZED ACCESS</h2>
+    
+        <div id="form">
+
+          <p *ngIf="mensajeError == true" id="mensajeerror">{{ textoError }}</p> 
+
+          <div class="form__item">
+            <label for="user">USER</label>
+            <input type="text" id="user" [(ngModel)]="usuario">
+          </div>
+    
+          <div class="form__item">
+            <label for="password">PASSWORD</label>
+            <input type="password" id="password" [(ngModel)]="password">
+          </div>
+    
+          <div class="form__item">
+            <button id="btn" (click)="logearse();">LOGIN</button>
+          </div>
+
+          <div class="form__item">
+            <li id="btn_register"><a routerLink="/registro" >REGISTER</a></li>
+          </div>
+          
+    
+        </div>
+    
+    </div>
+
+
+</body>
+    

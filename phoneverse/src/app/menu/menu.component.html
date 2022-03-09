@@ -1,0 +1,23 @@
+
+<header>
+    <a routerLink="/inicio" class="logo">PHONEVERSE</a>
+    <nav class="nav_menu">
+        <ul>
+            <li><a routerLink="/inicio">Inicio</a></li>
+            <li><a routerLink="/producto">Productos</a></li>
+            <li><a routerLink="/login">Login</a></li>
+        </ul>
+    </nav>  
+
+   <div *ngIf="this.loginDatosService.sesion == true">
+    <button  (click)="cerrarSesion();">Cerrar Sesion</button>
+
+    <a href="">Datos de tu cuenta</a>
+   </div> 
+
+     
+</header>
+
+
+
+
