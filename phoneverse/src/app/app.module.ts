@@ -16,6 +16,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { RegistroComponent } from './registro/registro.component';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,8 @@ import { RegistroComponent } from './registro/registro.component';
     ProductoComponent,
     LoginComponent,
     InicioComponent,
-    RegistroComponent
+    RegistroComponent,
+  
 
   ],
   imports: [

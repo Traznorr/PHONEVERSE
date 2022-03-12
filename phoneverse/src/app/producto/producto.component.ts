@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import VanillaTilt from 'vanilla-tilt';
 
 @Component({
   selector: 'app-producto',
@@ -10,6 +11,9 @@ export class ProductoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    VanillaTilt.init(document.querySelector('#card1') as any);
+    VanillaTilt.init(document.querySelector('#card2') as any);
+    VanillaTilt.init(document.querySelector('#card3') as any);
   }
 
 }

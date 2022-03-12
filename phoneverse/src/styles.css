@@ -14,11 +14,38 @@
 
 *{
     
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
+   
 }
 
+body {
+    width: 100% auto;
+}
+
+@media only screen and (max-device-width : 900px) {
+    body {
+        width: 100vh;
+    }
+}
+
+.div_img{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px; 
+}
+
+.div_img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   object-fit: cover;
+
+}
 
 
 @font-face {
@@ -27,3 +54,93 @@
 }
 
 
+/*FOOTER*/
+
+footer{
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to left, #11012a,#08232e);
+    color: #fff;
+    padding: 100px 0 30px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.columnas{
+    flex-basis: 25%;
+    padding: 10px;
+
+}
+
+.logo{
+    width: 80px;
+    margin-bottom: 30px;
+}
+
+.columnas h3 {
+    width: fit-content;
+    margin-bottom: 30px;
+    position: relative;
+
+}
+
+.email {
+    width: fit-content;
+    border-bottom: 1px solid var(--blue);
+    margin: 10px 0;
+}
+
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--blue);
+    margin-bottom: 50px;
+}
+
+form .fa-regular{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+form .input_email{
+    width: 100%;
+    background: transparent;
+    color: var(--blue);
+    border: 0;
+    outline: none;    
+}
+
+form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+form button .fa-brands{
+    font-size: 16px;
+    color: var(--blue);
+    border: 1px solid;
+    border-radius: 25%;
+}

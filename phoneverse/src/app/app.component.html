@@ -2,19 +2,14 @@
 <app-menu></app-menu>
 
 
-<section>
-    <img src="./assets/Montaña/star.jpg" id="star" alt="">
-    <img src="./assets/Montaña/planet.png" id="planeta" alt="">
-    <img src="./assets/Montaña/cyberMontainReady.png" id="cyberMontain" alt="">
-</section>
 
 
-<section class="route">
+
+<div class="route">
     <p *ngIf="this.loginDatosService.sesion == true">hola mundo</p>
     <router-outlet></router-outlet>
-</section>
+</div>
 
-<footer>
-    <p>holaaa</p>
-</footer>
+
+
 

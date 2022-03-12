@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginDatosService } from './logindatos/login-datos.service';
 
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,5 +14,6 @@ export class AppComponent implements OnInit {
   constructor(public loginDatosService : LoginDatosService) { }
 
   ngOnInit(): void {
+    
   }
 }

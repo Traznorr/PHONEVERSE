@@ -52,7 +52,7 @@ header ul li {
     border-width: 2px;
     border-color: transparent;
     overflow: hidden;
-    clip-path: polygon(150px 0px, 150px 20px, 125px 45px, 0px 57px, 0px 0px);
+    clip-path: polygon(150px 0px, 150px 20px, 125px 45px, -1px 45px, 0px 0px);
     transition: 0.7s;
 }
 
