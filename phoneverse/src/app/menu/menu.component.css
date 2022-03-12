@@ -1,5 +1,68 @@
 
+/*HEADER*/
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 80px 30px 50px;
+    display: flex;
+    object-fit: cover;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2000;
+}
 
+header .logo{
+    width: 15vmax;
+    cursor: pointer;
+    color: var(--yellow);
+    font-family: "Cyberpunk";
+    text-decoration: none;
+    text-shadow: var(--text-shadow) 2px 4px 0px;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    border-radius: 20px;
+    color: var(--red);
+    text-shadow: 0px 0px 3px var(--red-glow); 
+    text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+    background: var(--black-hover-background);
+    
+}
+
+/*TEXTOS*/
+section #slogan{
+    position: absolute;
+    color: var(--red);
+    text-shadow: 0px 0px 3px var(--red-glow); 
+    font-size: 7vmax;
+    text-align: center;
+    font-family: 'Rancho', sans-serif;
+    line-height: 0.8em;
+    white-space: nowrap;
+    transform: translateY(-200px);
+    margin-left: 10vw;   
+}
+
+/*
 header {
     position: absolute;
     top: 0;
@@ -39,7 +102,7 @@ header ul{
 }
 
 header ul li {
-     /* layout */
+    
     position: relative;
     list-style: none;
     padding: 10px;
@@ -47,7 +110,7 @@ header ul li {
     width: 150px;
     text-align: center;
     
-     /* Border */
+    
     border-style: solid;
     border-width: 2px;
     border-color: transparent;
@@ -61,7 +124,7 @@ header ul li a{
     text-transform: uppercase;
     cursor: pointer;
         
-    /* Font */
+   
     color: var(--red);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-shadow: 0px 0px 3px var(--red-glow); 
@@ -82,12 +145,11 @@ header ul li::after{
     
 
     transform: rotate(45deg);
-    /*border*/
+ 
     border-width: 2px;
     border-style: solid;
     border-color: transparent;
 
-     /* Animation */
     transition: color 1s ease-out;
     transition: border-color 1s ease-out;
 
@@ -109,5 +171,10 @@ header ul li a:hover{
     transition: color 0.23s linear;
     color: var(--blue);
 }
+
+*/
+
+
+
 
 
