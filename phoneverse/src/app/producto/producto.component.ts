@@ -14,6 +14,9 @@ export class ProductoComponent implements OnInit {
     VanillaTilt.init(document.querySelector('#card1') as any);
     VanillaTilt.init(document.querySelector('#card2') as any);
     VanillaTilt.init(document.querySelector('#card3') as any);
+    VanillaTilt.init(document.querySelector('#card4') as any);
+    VanillaTilt.init(document.querySelector('#card5') as any);
+    VanillaTilt.init(document.querySelector('#card6') as any);
   }
 
 }
