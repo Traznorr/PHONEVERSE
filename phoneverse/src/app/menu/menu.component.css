@@ -1,5 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap");
 
+
+
+* {
+  font-family: "Orbitron", sans-serif;
+}
 /*HEADER*/
+header{
+    position: absolute;
+    background: transparent;
+    height: 80px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    
+}
+
+header .logo{
+    position: absolute;
+    padding: 20px 50px;
+}
+
+.logo {
+    height: 40px;
+    cursor: pointer;
+    color: var(--yellow);
+    font-family: "Cyberpunk";
+    text-decoration: none;
+    text-shadow: var(--text-shadow) 2px 4px 0px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 20px;
+}
+
+nav ul li a{
+    color: var(--red);
+    text-shadow: 0px 0px 3px var(--red-glow); 
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 2px;
+    text-transform: uppercase; 
+}
+
+li a:hover{
+    background: var(--black-hover-background);
+    transform: .7s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: var(--blue);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        height: 15vh;
+        background: transparent;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+        color: var(--blue);
+    }
+    li a:hover{
+        background: none;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+/*
 header{
     position: absolute;
     top: 0;
@@ -10,7 +121,7 @@ header{
     object-fit: cover;
     justify-content: space-between;
     align-items: center;
-    z-index: 2000;
+    
 }
 
 header .logo{
@@ -48,19 +159,12 @@ nav ul li a.active{
     
 }
 
-/*TEXTOS*/
-section #slogan{
-    position: absolute;
-    color: var(--red);
-    text-shadow: 0px 0px 3px var(--red-glow); 
-    font-size: 7vmax;
-    text-align: center;
-    font-family: 'Rancho', sans-serif;
-    line-height: 0.8em;
-    white-space: nowrap;
-    transform: translateY(-200px);
-    margin-left: 10vw;   
-}
+*/
+
+/*MENU RESPONSIVE*/
+
+
+
 
 /*
 header {

@@ -22,16 +22,24 @@
 -->
 
 <header id="header">
-    <a routerLink="/inicio" class="logo">PHONEVERSE</a>
-    <nav class="mav bg-grid">
-        
-            <ul class="menulist">
-                <li><a class="active" cl routerLink="./inicio">Inicio</a></li>
-                <li><a  routerLink="./producto">Productos</a></li>
-                <li><a  routerLink="./login">Login</a></li>
-            </ul>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="bi bi-list"></i>
+        </label>
+
+        <a routerLink="/inicio" class="logo">PHONEVERSE</a>
+    
+            
+                <ul>
+                    <li><a (click)="goInicio();" routerLink="./inicio">Inicio</a></li>
+                    <li><a (click)="goProductos();" routerLink="./producto">Productos</a></li>
+                    <li><a (click)="goLogin();" routerLink="./login">Login</a></li>
+                </ul>
     </nav>
-  </header>
+</header>
+<!--RESPONSIVE MENU-->
+  
 
 
 

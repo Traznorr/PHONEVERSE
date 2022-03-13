@@ -5,10 +5,18 @@
 
 
 
-<div class="route">
+<div id="route" class="route">
     <p *ngIf="this.loginDatosService.sesion == true">hola mundo</p>
     <router-outlet></router-outlet>
 </div>
+
+<div class="cbr_botton">
+    <button class="cybr-btn" (click)="goHeader()">
+        Menu<span aria-hidden>_</span>
+        <span class="cybr-btn__glitch">Menu_</span>
+      </button>
+</div>
+
 
 
 

@@ -27,5 +27,17 @@ export class MenuComponent implements OnInit {
 
   }
   
+  public goInicio() {
+    console.log("hola");
+    document.getElementById("route")?.scrollIntoView({behavior:"smooth"});
+  }
+
+  public goProductos() {
+    document.getElementById("route")?.scrollIntoView({behavior:"smooth"});
+  }
+
+  public goLogin() {
+    document.getElementById("route")?.scrollIntoView({behavior:"smooth"});
+  }
 
 }

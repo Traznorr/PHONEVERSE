@@ -16,4 +16,8 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     
   }
+
+  public goHeader(){
+      document.getElementById("header")?.scrollIntoView({behavior:"smooth"});
+  }
 }
