@@ -27,9 +27,22 @@ header .logo{
     cursor: pointer;
     color: var(--yellow);
     font-family: "Cyberpunk";
+    font-size: 42px;
     text-decoration: none;
     text-shadow: var(--text-shadow) 2px 4px 0px;
+    
 }
+
+@media (max-width:  900px) {
+  
+    .logo {
+        font-size: 22px;
+        text-shadow: var(--text-shadow) 1px 3px 0px;
+        
+    }
+}
+
+
 
 nav ul{
     float: right;

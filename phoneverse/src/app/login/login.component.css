@@ -15,6 +15,17 @@
   padding: 25vh;
 
 }
+
+@media (max-width: 660px) {
+  
+    .div_loging{
+
+          margin-top: 25vh;
+          padding: 0vh;
+
+    }
+}
+
 .container {
  
   /*background-color: #111;*/
