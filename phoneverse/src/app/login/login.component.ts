@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import {Router} from '@angular/router';
 import { LoginDatosService } from '../logindatos/login-datos.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-login',
@@ -21,9 +22,12 @@ export class LoginComponent implements OnInit {
 
    
 
-  constructor(private http: HttpClient, private router: Router, private loginDatosService : LoginDatosService) { }
+  constructor(private http: HttpClient, private router: Router,
+              private loginDatosService : LoginDatosService, private cookieService : CookieService) { }
 
   ngOnInit(): void {
+    this.cookieService.set('myCookie', this.usuario);
+    this.cookieService.get('myCookie');
   }
 
   public logearse() {

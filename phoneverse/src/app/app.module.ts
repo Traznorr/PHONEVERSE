@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+// este import no servira para usar la libreria de cookies
+import { CookieService } from 'ngx-cookie-service';
 
 // esto nos servirá para poder conectarnos al backend (ver más abajo otra modificación)(0/4):
 import { HttpClientModule } from "@angular/common/http";
@@ -27,11 +29,13 @@ import { RegistroComponent } from './registro/registro.component';
     InicioComponent,
     RegistroComponent,
   
+  
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    
 
     // esto nos servirá también para poder conectarnos al backend:
     HttpClientModule,
@@ -39,7 +43,7 @@ import { RegistroComponent } from './registro/registro.component';
      // esto es necesario para poderr sacar datos de un input (2/4)
      FormsModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

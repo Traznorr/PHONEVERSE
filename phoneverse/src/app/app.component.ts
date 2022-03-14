@@ -14,6 +14,10 @@ export class AppComponent implements OnInit {
   constructor(public loginDatosService : LoginDatosService) { }
 
   ngOnInit(): void {
+
+    let menu_inicio = document.getElementById("menu_inicio");
+    console.log(menu_inicio);
+    
     
   }
 

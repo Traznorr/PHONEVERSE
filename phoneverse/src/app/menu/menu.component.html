@@ -32,9 +32,12 @@
     
             
                 <ul>
-                    <li><a (click)="goInicio();" routerLink="./inicio">Inicio</a></li>
-                    <li><a (click)="goProductos();" routerLink="./producto">Productos</a></li>
-                    <li><a (click)="goLogin();" routerLink="./login">Login</a></li>
+                    <li><a id="menu_inicio" class="btn_cerrar_sesion" (click)="goInicio();" routerLink="./inicio">Inicio</a></li>
+                    <li><a class="btn_cerrar_sesion" (click)="goProductos();" routerLink="./producto">Productos</a></li>
+                    <li><a class="btn_cerrar_sesion" (click)="goLogin();" routerLink="./login">Login</a></li>
+                    <li *ngIf="this.loginDatosService.sesion == true">
+                        <button class="btn_cerrar_sesion"  (click)="cerrarSesion();">Cerrar Sesion</button>
+                    </li>
                 </ul>
     </nav>
 </header>
