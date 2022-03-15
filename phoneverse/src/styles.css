@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap");
+
+
+
+
+
 :root {
     --red: rgba(211, 87, 91, 0.81);
     --red-glow: rgba(211, 87, 91, 0.91);
@@ -18,6 +24,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
    
 }
 
@@ -67,36 +74,80 @@ section img{
     pointer-events: none;
 }
 
+/*MODAL*/
 
+.modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
 
+    animation: modal 2s 3s forwards;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 3000;
+}
+.contenido_modal{
+    margin: auto;
+    width: 40%;
+    height: 45%;
+    text-align: center;
+    background: #fff;
+    border-radius: 10px;
+    overflow: auto;
+}
 
+#aceptar {
+    display: none;
+}
 
-/*
-@media (max-width : 300px) {
-    body {
-        width: 100vh;
+#aceptar + label {
+    display: absolute;
+    align-items: center;
+    cursor: pointer;
+    color: var(--red);
+   
+    font-size: 25px;
+    z-index: 4000;
+    margin-top: 500px;
+
+    animation: modal 2s 3s forwards;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#aceptar:hover + label:hover {
+    border-style: solid;
+    border-color: var(--blue);
+    border-radius: 10px;
+    color: var(--blue);
+    transition: .4s;  
+   
+}
+
+@media (max-width: 700px){
+    .contenido_modal{
+        width: 90%;
+        height: 45%;
+        overflow: auto;
     }
 }
 
-.div_img{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    padding: 100px; 
+
+
+#aceptar:checked + label, #aceptar:checked ~ .modal{
+    display: none;
 }
 
-.div_img img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-   object-fit: cover;
-
+@keyframes modal {
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 
-*/
 /*Fuentes*/
 
 @font-face {
