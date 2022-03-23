@@ -8,6 +8,10 @@ import { InicioComponent } from './inicio/inicio.component';
 import { RegistroComponent } from './registro/registro.component';
 
 const routes: Routes = [
+
+  { path: '', redirectTo: '/inicio', pathMatch: 'full' },
+	  
+
   {path: 'menu', component: MenuComponent},
   {path: 'producto', component: ProductoComponent},
   {path: 'login', component: LoginComponent},

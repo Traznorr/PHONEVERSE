@@ -26,17 +26,18 @@ export class LoginComponent implements OnInit {
               private loginDatosService : LoginDatosService, private cookieService : CookieService) { }
 
   ngOnInit(): void {
-    this.cookieService.set('myCookie', this.usuario);
-    this.cookieService.get('myCookie');
+    
   }
 
   public logearse() {
 
       console.log(this.usuario);
       console.log(this.password);
+      this.cookieService.set('myCookie', this.usuario);
+      this.cookieService.get('myCookie');
 
       
-      this.http.post("http://localhost/backend_phoneverso/login_post.php", { "usuario" : this.usuario, "password" : this.password }).subscribe( (respuesta)=>{
+      this.http.post("https://phoneverse.es/backend_phoneverso/login_post.php", { "usuario" : this.usuario, "password" : this.password }).subscribe( (respuesta)=>{
       
           //console.log( respuesta );
       

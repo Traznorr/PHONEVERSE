@@ -11,13 +11,20 @@ export class ProductoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    for(let i = 1; i <= 6 ; i++){
+
+      VanillaTilt.init(document.querySelector('#card'+i) as any);
+
+    }
+/*
     VanillaTilt.init(document.querySelector('#card1') as any);
     VanillaTilt.init(document.querySelector('#card2') as any);
     VanillaTilt.init(document.querySelector('#card3') as any);
     VanillaTilt.init(document.querySelector('#card4') as any);
     VanillaTilt.init(document.querySelector('#card5') as any);
     VanillaTilt.init(document.querySelector('#card6') as any);
-
+*/
   }
 
 }

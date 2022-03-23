@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 import { HttpClient } from "@angular/common/http";
 
 @Component({
@@ -14,7 +15,7 @@ export class RegistroComponent implements OnInit {
   public email : string = "email inicial";
   public registroJson : any = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
      
@@ -29,7 +30,7 @@ export class RegistroComponent implements OnInit {
 
      // usar la api para registrar con estos datos:
      
-     this.http.post("http://localhost/backend_phoneverso/registro_post.php", { "usuario" : this.usuario, "password" : this.password, "email" : this.email }).subscribe( (respuesta)=>{
+     this.http.post("https://phoneverse.es/backend_phoneverso/registro_post.php", { "usuario" : this.usuario, "password" : this.password, "email" : this.email }).subscribe( (respuesta)=>{
 		
         //console.log( respuesta );
     
@@ -37,9 +38,13 @@ export class RegistroComponent implements OnInit {
 
         if(this.registroJson.respuesta == "ya existe el usuario"){
 
+        
+
           alert("ya existe el usuario");
 
         } else {
+
+          this.router.navigateByUrl("login");
 
           alert("resgitrado con exito");
 
