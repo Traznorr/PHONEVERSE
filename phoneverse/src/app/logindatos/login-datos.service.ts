@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class LoginDatosService {
 
   public sesion : boolean = false;
+  public idUsuarioLogueado : number = 0;
 
   constructor() { }
 }

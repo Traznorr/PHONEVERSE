@@ -29,24 +29,23 @@ export class RegistroComponent implements OnInit {
      console.log(this.email);
 
      // usar la api para registrar con estos datos:
-     
-     this.http.post("https://phoneverse.es/backend_phoneverso/registro_post.php", { "usuario" : this.usuario, "password" : this.password, "email" : this.email }).subscribe( (respuesta)=>{
+
+     this.http.post("http://localhost/backend_phoneverso/registro_post.php", { "usuario" : this.usuario, "password" : this.password, "email" : this.email }).subscribe( (respuesta)=>{
+     //this.http.post("https://phoneverse.es/backend_phoneverso/registro_post.php", { "usuario" : this.usuario, "password" : this.password, "email" : this.email }).subscribe( (respuesta)=>{
 		
         //console.log( respuesta );
     
         this.registroJson = respuesta;
 
-        if(this.registroJson.respuesta == "ya existe el usuario"){
+        if (this.registroJson.respuesta == "ya existe el usuario"){
 
-        
-
-          alert("ya existe el usuario");
+          alert("¡¡¡Ya existe el usuario!!!");
 
         } else {
 
           this.router.navigateByUrl("login");
 
-          alert("resgitrado con exito");
+          alert("¡¡¡Registrado con exito!!!");
 
         }
 
@@ -55,7 +54,5 @@ export class RegistroComponent implements OnInit {
     } );
 
   }
-
-  
 
 }

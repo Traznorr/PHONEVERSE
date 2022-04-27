@@ -29,16 +29,16 @@
         </label>
 
         <a routerLink="/inicio" class="logo">PHONEVERSE</a>
-    
-            
-                <ul>
-                    <li><a id="menu_inicio" class="btn_cerrar_sesion" (click)="goInicio();" routerLink="./inicio">Inicio</a></li>
-                    <li><a class="btn_cerrar_sesion" (click)="goProductos();" routerLink="./producto">Productos</a></li>
-                    <li><a class="btn_cerrar_sesion" (click)="goLogin();" routerLink="./login">Login</a></li>
-                    <li *ngIf="this.loginDatosService.sesion == true">
-                        <button class="btn_cerrar_sesion"  (click)="cerrarSesion();">Cerrar Sesion</button>
-                    </li>
-                </ul>
+
+        <ul>
+            <li><a id="menu_inicio" class="btn_cerrar_sesion" (click)="goInicio();" routerLink="./inicio">Inicio</a></li>
+            <li><a class="btn_cerrar_sesion" (click)="goProductos();" routerLink="./producto">Productos</a></li>
+            <li><a class="btn_cerrar_sesion" (click)="goLogin();" routerLink="./login">Login</a></li>
+            <li *ngIf="this.loginDatosService.sesion == true">
+                <button class="btn_cerrar_sesion"  (click)="cerrarSesion();">Cerrar Sesion</button>
+            </li>
+        </ul>
+        
     </nav>
 </header>
 

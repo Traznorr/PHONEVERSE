@@ -1,6 +1,32 @@
 
 <div class="contenedor_padre">
     <div class="container">
+
+        <div *ngFor="let movilJson of movilesJson; let i = index;">
+
+            <div class="card" id="card{{ i + 1 }} " data-tilt data-tilt-scale="1.2" data-tilt-glare data-tilt-max-glare="1" >
+                <img id="img_movil" src="./assets/movil/{{ movilJson.imagen_preview }}" alt="">
+                <div class="content" >
+                    
+                    <h2>01</h2>
+                    <h3> {{ movilJson.nombre }} </h3>
+                    <p>
+                        Marca: {{ movilJson.marca }} 
+                        Precio: {{ movilJson.precio }}                         
+                    </p>
+    
+                    <!--
+                    <a href="#">Ver detalles</a>
+                    -->
+
+                    <a routerLink="{{ movilJson.enlace_detalles }}">Ver móvil</a>
+    
+                </div>
+            </div>
+
+        </div>
+
+        <!--
         <div class="card" id="card1" data-tilt data-tilt-scale="1.2" data-tilt-glare data-tilt-max-glare="1" >
             <img id="img_movil" src="./assets/movil/movil1.PNG" alt="">
             <div class="content" >
@@ -68,7 +94,9 @@
 
             </div>
         </div>
-        
+
+        -->
+
     </div>
 </div>
 

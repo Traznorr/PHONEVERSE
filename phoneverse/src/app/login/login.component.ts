@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
 
    public registroJson : any = [];
 
-   
 
   constructor(private http: HttpClient, private router: Router,
               private loginDatosService : LoginDatosService, private cookieService : CookieService) { }
@@ -33,21 +32,28 @@ export class LoginComponent implements OnInit {
 
       console.log(this.usuario);
       console.log(this.password);
+
       this.cookieService.set('myCookie', this.usuario);
       this.cookieService.get('myCookie');
 
+      console.log("pasa por 0");
+
+      this.http.post("http://localhost/backend_phoneverso/login_post.php", { "usuario" : this.usuario, "password" : this.password }).subscribe( (respuesta)=>{
+      //this.http.post("https://phoneverse.es/backend_phoneverso/login_post.php", { "usuario" : this.usuario, "password" : this.password }).subscribe( (respuesta)=>{
       
-      this.http.post("https://phoneverse.es/backend_phoneverso/login_post.php", { "usuario" : this.usuario, "password" : this.password }).subscribe( (respuesta)=>{
-      
-          //console.log( respuesta );
+          console.log("pasa por 1");
+
+          console.log( respuesta );
       
           this.registroJson = respuesta;
 
-          if (this.registroJson.respuesta == "SI existe el usuario"){
+          if (this.registroJson.respuesta == "SI existe el usuario") {
 
             this.mensajeError = false;
 
             this.loginDatosService.sesion = true;
+
+            this.loginDatosService.idUsuarioLogueado = this.registroJson.id_usuario;
 
             this.router.navigateByUrl("inicio");
 

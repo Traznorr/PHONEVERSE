@@ -1,0 +1,18 @@
+
+<h4>Cesta de la compra</h4>
+
+<p *ngFor="let producto of productosCarrito">
+
+      Nombre:
+      {{ producto.nombre }} 
+
+      Precio:
+      {{ producto.precio }}
+    
+</p>
+
+<p>Total a pagar</p>
+
+{{ precioTotal }}
+
+<button (click)="finalizarPedido();">Terminar compra</button>

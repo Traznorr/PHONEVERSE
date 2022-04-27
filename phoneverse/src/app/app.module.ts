@@ -16,6 +16,8 @@ import { ProductoComponent } from './producto/producto.component';
 import { LoginComponent } from './login/login.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { RegistroComponent } from './registro/registro.component';
+import { DetallesMovilComponent } from './detalles-movil/detalles-movil.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 
 
@@ -28,6 +30,8 @@ import { RegistroComponent } from './registro/registro.component';
     LoginComponent,
     InicioComponent,
     RegistroComponent,
+    DetallesMovilComponent,
+    CarritoComponent,
   
   
 
