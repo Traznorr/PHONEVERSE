@@ -15,4 +15,11 @@
 
 {{ precioTotal }}
 
-<button (click)="finalizarPedido();">Terminar compra</button>
+<div *ngIf="this.loginDatosService.sesion == true">
+      <button (click)="finalizarPedido();">Terminar compra</button>
+</div>
+
+
+
+
+

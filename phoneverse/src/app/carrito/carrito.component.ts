@@ -16,11 +16,13 @@ export class CarritoComponent implements OnInit {
   public precioTotal : number;
   public respuestaFinalizarPedidos : any;
   public idUsuario : number;
+  public idsProductos : any;
 
-  constructor(private datosCarrito : DatosCarritoService, private http: HttpClient, private loginDatosService : LoginDatosService) { 
+  constructor(private datosCarrito : DatosCarritoService, private http: HttpClient, public loginDatosService : LoginDatosService) { 
     
     this.precioTotal = 0;
     this.idUsuario = -1;
+    this.idsProductos = [];
 
   }
 
@@ -32,13 +34,15 @@ export class CarritoComponent implements OnInit {
 
     this.idUsuario = this.loginDatosService.idUsuarioLogueado;
 
+    this.idsProductos = this.datosCarrito.idsProductos;
+
   }
 
   public finalizarPedido() {
     
     console.log( "pasa por 1" );
-    
-    this.http.post("http://localhost/backend_phoneverso/finalizar_compra.php", { "productosCarrito" : this.productosCarrito, "precioTotal" : this.precioTotal, "idUsuario" : this.idUsuario }).subscribe( (respuesta)=>{
+
+    this.http.post("http://localhost/backend_phoneverso/finalizar_compra.php", { "productosCarrito" : this.productosCarrito, "precioTotal" : this.precioTotal, "idUsuario" : this.idUsuario, "idsProductos" : this.idsProductos}).subscribe( (respuesta)=>{
 
          console.log( "pasa por 2" );
 
@@ -66,6 +70,16 @@ export class CarritoComponent implements OnInit {
          console.log(this.registroJson);
          */
    
+         this.productosCarrito = [];
+
+         this.precioTotal = 0;
+     
+         this.idUsuario = 0;
+     
+         this.idsProductos = [];
+
+
+
      } );    
 
     /*

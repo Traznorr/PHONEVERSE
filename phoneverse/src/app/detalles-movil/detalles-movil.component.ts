@@ -27,28 +27,28 @@ export class DetallesMovilComponent implements OnInit {
     console.log("id:");
     console.log(dni_movil);
     
-    let api= "http://localhost/backend_phoneverso/dame_detalles_movil.php?id=" + dni_movil;
+    let api = "http://localhost/backend_phoneverso/dame_detalles_movil_2.0.php?id=" + dni_movil;
 
-    this.http.get(api).subscribe( (respuesta)=>{
+    this.http.get(api).subscribe( (respuesta)=> {
 		
-        //console.log( respuesta );
+       //console.log( respuesta );
 
        this.detallesMovilJson = respuesta;
        console.log(this.detallesMovilJson);
   
     } );
     
-
   }
-
   public comprar() {
     console.log("Has pulsado el boton");
 
     //Lista de la compra
     this.datosCarrito.productos.push(this.detallesMovilJson);
 
+    this.datosCarrito.idsProductos.push(this.detallesMovilJson.id);
+
     //Total a pagar
-    this.datosCarrito.sumaCarrito = this.datosCarrito.sumaCarrito + this.detallesMovilJson.precio;
+    this.datosCarrito.sumaCarrito = this.datosCarrito.sumaCarrito + parseInt(this.detallesMovilJson.precio);
 
     this.router.navigateByUrl("carrito");
 

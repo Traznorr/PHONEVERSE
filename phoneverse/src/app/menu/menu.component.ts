@@ -15,23 +15,22 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
   }
 
- 
   public cerrarSesion() {
 
     console.log("sesion cerrada");
     
     this.loginDatosService.sesion = false;
 
-
   }
   
-  public goInicio() {
-    console.log("hola");
+  public goAreaMain() {
     document.getElementById("route")?.scrollIntoView({behavior:"smooth"});
   }
 
+  /*
   public goProductos() {
     document.getElementById("route")?.scrollIntoView({behavior:"smooth"});
   }
@@ -39,5 +38,6 @@ export class MenuComponent implements OnInit {
   public goLogin() {
     document.getElementById("route")?.scrollIntoView({behavior:"smooth"});
   }
+  */
 
 }
