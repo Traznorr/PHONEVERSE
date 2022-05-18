@@ -18,6 +18,8 @@ export class CarritoComponent implements OnInit {
   public idUsuario : number;
   public idsProductos : any;
 
+  public cestaVacia : boolean = false;
+
   constructor(private datosCarrito : DatosCarritoService, private http: HttpClient, public loginDatosService : LoginDatosService) { 
     
     this.precioTotal = 0;
@@ -36,6 +38,12 @@ export class CarritoComponent implements OnInit {
 
     this.idsProductos = this.datosCarrito.idsProductos;
 
+    if (this.productosCarrito.length == 0) {
+      this.cestaVacia = false;
+    } else {
+      this.cestaVacia = true;
+    }
+
   }
 
   public finalizarPedido() {
@@ -48,6 +56,9 @@ export class CarritoComponent implements OnInit {
 
          //this.http.post("https://phoneverse.es/backend_phoneverso/registro_post.php", { "usuario" : this.usuario, "password" : this.password, "email" : this.email }).subscribe( (respuesta)=>{
      
+         console.log("id usuario:");
+         console.log(this.idUsuario);
+
          console.log( respuesta );
          
          this.respuestaFinalizarPedidos = respuesta;

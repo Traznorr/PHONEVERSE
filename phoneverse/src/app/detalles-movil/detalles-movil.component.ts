@@ -16,6 +16,10 @@ export class DetallesMovilComponent implements OnInit {
 
   public detallesMovilJson : any = {};
   public carrito : any = [];
+  public carruselImagenes : any = [];
+
+  public numeroImagenActualCarrusel : number = 0;
+  public imagenVisibleAhora : string = "";
 
   constructor(private route: ActivatedRoute, private router: Router, private http: HttpClient, private datosCarrito : DatosCarritoService) { }
 
@@ -35,7 +39,15 @@ export class DetallesMovilComponent implements OnInit {
 
        this.detallesMovilJson = respuesta;
        console.log(this.detallesMovilJson);
+
+       // almacenamos todas las imágenes del móvil -del carrusel- en un array
+
+       this.carruselImagenes = this.detallesMovilJson.fotos_carrusel.split(",");
   
+       this.numeroImagenActualCarrusel = 0;
+
+       this.imagenVisibleAhora = this.carruselImagenes[0];
+
     } );
     
   }
@@ -57,5 +69,36 @@ export class DetallesMovilComponent implements OnInit {
 
 
   }
-  
+ 
+  public siguienteImagen() {
+
+    this.numeroImagenActualCarrusel++;
+
+    if (this.numeroImagenActualCarrusel >= this.carruselImagenes.length) {
+
+      this.numeroImagenActualCarrusel = 0;
+
+    }
+
+    // ahora actualizamos la imagen utilizando el array de imágenes
+    this.imagenVisibleAhora = this.carruselImagenes[ this.numeroImagenActualCarrusel ];
+
+  }
+
+  public anteriorImagen() {
+
+    this.numeroImagenActualCarrusel--;
+
+    if (this.numeroImagenActualCarrusel < 0) {
+
+      this.numeroImagenActualCarrusel = this.carruselImagenes.length - 1;
+
+    }
+
+    // ahora actualizamos la imagen utilizando el array de imágenes
+    this.imagenVisibleAhora = this.carruselImagenes[ this.numeroImagenActualCarrusel ];
+
+  }
+
+
 }

@@ -1,10 +1,21 @@
 
-<p>
-    numero procesadores: {{ detallesMovilJson.numero_procesadores }} 
-    memoria ram: {{ detallesMovilJson.memoria }}     
-    precio: {{ detallesMovilJson.precio }}     
-    color: {{ detallesMovilJson.color }}     
-</p>
+<img id="imagenCarrusel" src="./assets/movil/{{  this.imagenVisibleAhora }}" alt="">
+
+<br>
+
+<button (click)="anteriorImagen();">Anterior</button>
+<button (click)="siguienteImagen();">Siguiente</button>
+
+<div class="datosmovil">
+
+    <p>
+        numero procesadores: {{ detallesMovilJson.numero_procesadores }} 
+        memoria ram: {{ detallesMovilJson.memoria }}     
+        precio: {{ detallesMovilJson.precio }}     
+        color: {{ detallesMovilJson.color }}     
+    </p>
+
+</div>
 
 <button (click)="comprar();">Comprar</button>
 
