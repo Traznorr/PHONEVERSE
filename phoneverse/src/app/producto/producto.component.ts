@@ -28,22 +28,17 @@ export class ProductoComponent implements OnInit {
 
         this.movilesJson = respuesta;
 
-        for (let i = 1; i <= 2 ; i++) {
 
-          VanillaTilt.init(document.querySelector('#card'+i ) as any);
-    
-        }
-  
     } );
 
-/*
+   
+  }
+
+  // así conseguimos el efecto visual en cada card de cada móvil, 
+  ngAfterViewChecked(): void {
     VanillaTilt.init(document.querySelector('#card1') as any);
     VanillaTilt.init(document.querySelector('#card2') as any);
-    VanillaTilt.init(document.querySelector('#card3') as any);
-    VanillaTilt.init(document.querySelector('#card4') as any);
-    VanillaTilt.init(document.querySelector('#card5') as any);
-    VanillaTilt.init(document.querySelector('#card6') as any);
-*/
   }
+  
 
 }
