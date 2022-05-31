@@ -37,6 +37,10 @@
 
             <li><a class="btn_cerrar_sesion" (click)="goAreaMain();" routerLink="./carrito">Cesta</a></li>
 
+            <li *ngIf="this.loginDatosService.sesion == true">
+                <a class="btn_cerrar_sesion" (click)="goAreaMain();" routerLink="./pedidos">Historial Pedidos</a>
+            </li>
+
             <li><a class="btn_cerrar_sesion" (click)="goAreaMain();" routerLink="./login">Login</a></li>
 
             <li *ngIf="this.loginDatosService.sesion == true">

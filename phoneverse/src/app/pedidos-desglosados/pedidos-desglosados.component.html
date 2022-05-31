@@ -1,0 +1,22 @@
+
+<div class="contenedor_padre">
+    <div class="container">
+
+            <div *ngFor="let unproducto of pedidos_desglosados; let i = index;">
+                
+                <div class="content">
+                    
+                    <h2> Id: {{ unproducto.id }} </h2>
+                    <p>                       
+                        Id Móvil: {{ unproducto.id_movil }} 
+                    </p>
+    
+                    <!--
+                    <a routerLink="{{ unproducto.id }}">Ver pedido desglosado</a>
+                    -->
+                </div>
+
+            </div>
+
+    </div>
+</div>

@@ -18,6 +18,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { RegistroComponent } from './registro/registro.component';
 import { DetallesMovilComponent } from './detalles-movil/detalles-movil.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { PedidosComponent } from './pedidos/pedidos.component';
+import { PedidosDesglosadosComponent } from './pedidos-desglosados/pedidos-desglosados.component';
 
 
 
@@ -32,6 +34,8 @@ import { CarritoComponent } from './carrito/carrito.component';
     RegistroComponent,
     DetallesMovilComponent,
     CarritoComponent,
+    PedidosComponent,
+    PedidosDesglosadosComponent,
   
   
 
