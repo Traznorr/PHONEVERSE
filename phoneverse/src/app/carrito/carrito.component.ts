@@ -3,6 +3,7 @@ import { DatosCarritoService } from '../datos-carrito/datos-carrito.service';
 import { LoginDatosService } from '../logindatos/login-datos.service';
 
 import { HttpClient } from "@angular/common/http";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-carrito',
@@ -20,7 +21,7 @@ export class CarritoComponent implements OnInit {
 
   public cestaVacia : boolean = false;
 
-  constructor(private datosCarrito : DatosCarritoService, private http: HttpClient, public loginDatosService : LoginDatosService) { 
+  constructor(private datosCarrito : DatosCarritoService, private http: HttpClient, public loginDatosService : LoginDatosService, private router: Router) { 
     
     this.precioTotal = 0;
     this.idUsuario = -1;
@@ -89,7 +90,7 @@ export class CarritoComponent implements OnInit {
      
          this.idsProductos = [];
 
-
+         this.router.navigateByUrl("ultimopaso");
 
      } );    
 

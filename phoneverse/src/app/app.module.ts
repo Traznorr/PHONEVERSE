@@ -20,6 +20,7 @@ import { DetallesMovilComponent } from './detalles-movil/detalles-movil.componen
 import { CarritoComponent } from './carrito/carrito.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { PedidosDesglosadosComponent } from './pedidos-desglosados/pedidos-desglosados.component';
+import { UltimoPasoCompraComponent } from './ultimo-paso-compra/ultimo-paso-compra.component';
 
 
 
@@ -36,6 +37,7 @@ import { PedidosDesglosadosComponent } from './pedidos-desglosados/pedidos-desgl
     CarritoComponent,
     PedidosComponent,
     PedidosDesglosadosComponent,
+    UltimoPasoCompraComponent,
   
   
 

@@ -2,21 +2,28 @@
 <div class="contenedor_padre">
     <div class="container">
 
-            <div *ngFor="let unpedido of pedidos; let i = index;">
-                
-                <div class="content">
-                    
-                    <h2> Código Factura: {{ unpedido.id }} </h2>
-                    <p>
-                        Precio total: {{ unpedido.precio_total }}€
-                        Fecha: {{ unpedido.fecha }} 
-                    </p>
-    
-                    <a routerLink="/pedidos-desglosados/{{ unpedido.id }}">Ver pedido desglosado</a>
-    
-                </div>
+        <table>
+            
+            <tr>
 
-            </div>
+                  <th>Código Factura</th>
+                  <th>Precio total</th>
+                  <th>Fecha</th>
+                  <th>Ver Detalles</th>
+
+            </tr>
+                
+            <tr *ngFor="let unpedido of pedidos; let i = index;">
+
+                <td> {{ unpedido.id }} </td>
+                <td> {{ unpedido.precio_total }} </td>
+                <td> {{ unpedido.fecha }} </td>
+
+                <td> <a routerLink="/pedidos-desglosados/{{ unpedido.id }}">Ver pedido desglosado</a> </td>
+
+            </tr>
+
+        </table>
 
     </div>
 </div>

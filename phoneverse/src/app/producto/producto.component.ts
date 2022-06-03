@@ -36,8 +36,13 @@ export class ProductoComponent implements OnInit {
 
   // así conseguimos el efecto visual en cada card de cada móvil, 
   ngAfterViewChecked(): void {
-    VanillaTilt.init(document.querySelector('#card1') as any);
-    VanillaTilt.init(document.querySelector('#card2') as any);
+
+    for (let i = 1; i <= this.movilesJson.length; i++) {
+
+      VanillaTilt.init(document.querySelector('#card' + i) as any);
+
+    }
+    
   }
   
 

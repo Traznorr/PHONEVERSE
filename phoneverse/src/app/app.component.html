@@ -6,17 +6,18 @@
 
 
 <div id="route" class="route">
-    <p *ngIf="this.loginDatosService.sesion == true">hola mundo</p>
+    <p *ngIf="this.loginDatosService.sesion == true"></p>
     <router-outlet></router-outlet>
 </div>
 
-<div class="cbr_botton">
-    <button class="cybr-btn" (click)="goHeader()">
-        Menu<span aria-hidden>_</span>
-        <span class="cybr-btn__glitch">Menu_</span>
-      </button>
+<div id="divbutton">
+    <div class="cbr_botton">
+        <button class="cybr-btn" (click)="goHeader()">
+            Menu<span aria-hidden>_</span>
+            <span class="cybr-btn__glitch">Menu_</span>
+        </button>
+    </div>
 </div>
-
 
 
 

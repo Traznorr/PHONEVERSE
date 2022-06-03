@@ -6,15 +6,18 @@
     width: 100%;    
     background: #11012a;
     margin-bottom: 200px;
-  
 }
 
-div button {
-   position: absolute;
-   right: 50%;
+#divbutton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
    z-index: 2000;
    margin-top: -170px;
+   
 }
+
 
 
 @font-face {
@@ -24,6 +27,7 @@ div button {
 }
 
 .cybr-btn {
+  
     --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 1%));
     --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 50%);
     --primary-hue: 0;
@@ -59,6 +63,8 @@ div button {
     height: 50px;
     line-height: 50px;
     transition: background 0.2s;
+    margin:0px auto;
+
   }
   .cybr-btn:hover {
     --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.8%));
@@ -174,3 +180,9 @@ div button {
   .cybr-btn:nth-of-type(2) {
     --primary-hue: 260;
   }
+
+  .Boton_cyberpunk {
+   text-align: center;
+  }
+
+

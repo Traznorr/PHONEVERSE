@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
 
    public registroJson : any = [];
 
-
   constructor(private http: HttpClient, private router: Router,
               private loginDatosService : LoginDatosService, private cookieService : CookieService) { }
 
@@ -56,7 +55,7 @@ export class LoginComponent implements OnInit {
             this.loginDatosService.idUsuarioLogueado = this.registroJson.id_usuario;
 
             this.router.navigateByUrl("inicio");
-
+            
           } else {
 
             this.mensajeError = true;

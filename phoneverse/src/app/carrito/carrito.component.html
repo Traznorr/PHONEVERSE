@@ -1,32 +1,24 @@
 
 <h4>Cesta de la compra</h4>
 
-<div *ngIf="this.cestaVacia == true">
+<table>
+      <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+      </tr>
 
-      <table>
-            <tr>
-                  <th>Nombre</th>
-                  <th>Precio</th>
-            </tr>
-
-            <tr *ngFor="let producto of productosCarrito">
+      <div *ngIf="this.cestaVacia == true">
+            <tr *ngFor="let producto of productosCarrito" >
                   <td> {{ producto.nombre }} </td>
                   <td> {{ producto.precio }}€ </td>
             </tr>
-            
-            <tr>
-                  <td>Total a pagar</td>
-                  <td>{{ precioTotal }}€</td>
-            </tr>
-      </table>
+      </div>
 
-</div>
-
-<div *ngIf="this.cestaVacia == false">
-
-      La cesta está vacía
-
-</div>
+      <tr>
+            <td>Total a pagar</td>
+            <td>{{ precioTotal }}€</td>
+      </tr>
+</table>
 
 <div *ngIf="this.loginDatosService.sesion == true">
       <button (click)="finalizarPedido();">Terminar compra</button>

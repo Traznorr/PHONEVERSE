@@ -9,8 +9,8 @@ import { RegistroComponent } from './registro/registro.component';
 import { DetallesMovilComponent } from './detalles-movil/detalles-movil.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
-
 import { PedidosDesglosadosComponent } from './pedidos-desglosados/pedidos-desglosados.component';
+import { UltimoPasoCompraComponent } from './ultimo-paso-compra/ultimo-paso-compra.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/inicio', pathMatch: 'full' },
@@ -28,6 +28,8 @@ const routes: Routes = [
   {path: 'pedidos-desglosados/:id', component: PedidosDesglosadosComponent},
 
   { path: 'carrito', component: CarritoComponent },
+
+  { path: 'ultimopaso', component: UltimoPasoCompraComponent },
 
 ];
 
