@@ -18,3 +18,22 @@ table {
   tr:nth-child(odd) {
     background-color: gray;
   }
+
+  .btn_cerrar_sesion{
+    color: 	var(--red);
+    text-shadow: 0px 0px 3px var(--red-glow); 
+    text-transform: uppercase;
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 2px solid var(--blue);
+    padding: 5px;
+   
+}
+
+button:hover{
+  background: var(--blue);
+  transform: .7s;
+}
