@@ -61,12 +61,13 @@ img {
     border: none;
     cursor: pointer;
     border-radius: 25px;
-    border: 2px solid var(--blue);
+    border: 2px solid #009bf2;
     padding: 5px;
    
 }
 
 button:hover{
+    border: 2px solid var(--blue);
     background: var(--blue);
     transform: .7s;
 }
