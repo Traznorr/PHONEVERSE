@@ -1,0 +1,58 @@
+
+
+<!--
+<header>
+    <a routerLink="/inicio" class="logo">PHONEVERSE</a>
+    <nav class="nav_menu">
+        <ul>
+            <li><a routerLink="/inicio">Inicio</a></li>
+            <li><a routerLink="/producto">Productos</a></li>
+            <li><a routerLink="/login">Login</a></li>
+        </ul>
+    </nav>  
+
+   <div *ngIf="this.loginDatosService.sesion == true">
+    <button  (click)="cerrarSesion();">Cerrar Sesion</button>
+
+    <a href="">Datos de tu cuenta</a>
+   </div> 
+  
+</header>
+
+-->
+
+<header id="header">
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="bi bi-list"></i>
+        </label>
+
+        <a routerLink="/inicio" class="logo">PHONEVERSE</a>
+
+        <ul>
+            <li><a id="menu_inicio" class="btn_cerrar_sesion" (click)="goAreaMain();" routerLink="./inicio">Inicio</a></li>
+
+            <li><a class="btn_cerrar_sesion" (click)="goAreaMain();" routerLink="./producto">Productos</a></li>
+
+            <li><a class="btn_cerrar_sesion" (click)="goAreaMain();" routerLink="./carrito">Cesta</a></li>
+
+            <li *ngIf="this.loginDatosService.sesion == true">
+                <a class="btn_cerrar_sesion" (click)="goAreaMain();" routerLink="./pedidos">Historial Pedidos</a>
+            </li>
+
+            <li><a class="btn_cerrar_sesion" (click)="goAreaMain();" routerLink="./login">Login</a></li>
+
+            <li *ngIf="this.loginDatosService.sesion == true">
+                <button class="btn_cerrar_sesion"  (click)="cerrarSesion();">Cerrar Sesion</button>
+            </li>
+        </ul>
+        
+    </nav>
+</header>
+
+  
+
+
+
+

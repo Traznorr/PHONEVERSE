@@ -1,0 +1,32 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+   
+  tr:nth-child(odd) {
+    background-color: gray;
+  }
+
+  .ver_pedido {
+    color: black;
+    text-shadow: 0px 0px 3px var(--red-glow); 
+    text-decoration: none;
+  }
+
+  .ver_pedido:hover {
+    color: #009bf2;
+    text-shadow: 0px 0px 3px black; 
+    
+  }

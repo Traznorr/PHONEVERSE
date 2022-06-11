@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap");
+
+
+
+* {
+  font-family: "Orbitron", sans-serif;
+}
+/*HEADER*/
+header{
+    position: absolute;
+    background: transparent;
+    height: 80px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    
+}
+
+header .logo{
+    position: absolute;
+    padding: 20px 50px;
+}
+
+.logo {
+    height: 40px;
+    cursor: pointer;
+    color: var(--yellow);
+    font-family: "Cyberpunk";
+    font-size: 42px;
+    text-decoration: none;
+    text-shadow: var(--text-shadow) 2px 4px 0px;
+    
+}
+
+@media (max-width:  900px) {
+  
+    .logo {
+        font-size: 22px;
+        text-shadow: var(--text-shadow) 1px 3px 0px;
+        
+    }
+}
+
+
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 20px;
+}
+
+
+.btn_cerrar_sesion{
+    color: 	var(--red);
+    text-shadow: 0px 0px 3px var(--red-glow); 
+    text-transform: uppercase;
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 2px solid #009bf2;
+    padding: 5px;
+   
+}
+
+
+li a:hover{
+    background: var(--blue);
+    transform: .7s;
+    border: 2px solid var(--blue);
+}
+
+li :hover{
+    background: var(--blue);
+    transform: .7s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: var(--blue);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        height: 15vh;
+        background: transparent;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+        color: var(--blue);
+    }
+    li a:hover{
+        background: none;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+
+
+
+
+

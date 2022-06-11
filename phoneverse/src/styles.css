@@ -1,0 +1,253 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap");
+
+
+
+
+
+:root {
+    --red: rgba(211, 87, 91, 0.81);
+    --red-glow: rgba(211, 87, 91, 0.91);
+    --red-scanline: rgba(204, 94, 98, 0.2);
+    --black-scanline: rgba(1, 1, 1, 0.9);
+    --black-hover-background: rgba(0, 0, 0, 0.25);
+    --blue: #61e4fa;
+    --yellow: #f7f500;
+    --text-shadow: rgb(0, 208, 255);
+    --primary-color: #fccf03;
+    --secondary-color: #fff;
+    
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
+   
+}
+
+
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #11012a;
+    width: 100%;
+}
+
+
+
+
+/*SECTION*/
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+}
+/*DESVANECIMIENTO*/
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to top, #11012a, transparent);
+    z-index: 10;
+}
+
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+
+
+/*Fuentes*/
+
+@font-face {
+    font-family: Cyberpunk;
+    src: url(assets/fonts/Cyberpunk.ttf);
+}
+
+
+
+
+/*FOOTER*/
+
+footer{
+    width: 100%;
+    position: relative;
+    background: linear-gradient(#11012a,#08232e);
+    color: #fff;
+    padding: 100px 0 30px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+
+.row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.columnas{
+    flex-basis: 25%;
+    padding: 10px;
+
+}
+
+.columnas:nth-child(2), .columnas:nth-child(3){
+    flex-basis: 15%;
+}
+
+.logo{
+    width: 80px;
+    margin-bottom: 30px;
+}
+
+.columnas h3 {
+    width: fit-content;
+    margin-bottom: 30px;
+    position: relative;
+
+}
+
+.email {
+    width: fit-content;
+    border-bottom: 1px solid var(--blue);
+    margin: 10px 0;
+}
+
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--blue);
+    margin-bottom: 50px;
+}
+
+form .fa-regular{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+form .input_email{
+    width: 100%;
+    background: transparent;
+    color: var(--blue);
+    border: 0;
+    outline: none;    
+}
+
+form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+form button .fa-brands{
+    font-size: 16px;
+    color: var(--blue);
+    border: 1px solid;
+    border-radius: 25%;
+}
+
+.social_icons .fa-brands{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 20px;
+    color: var(--blue);
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+hr {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid var(--blue);
+    margin: 20px auto;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.underline{
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    overflow: hidden;
+
+}
+
+.underline span{
+    width: 15px;
+    height: 100%;
+    background: var(--blue);
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+
+@keyframes moving{
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+@media (max-width: 700px){
+    footer{
+        bottom: unset;
+    }
+    .columnas{
+        flex-basis: 100%;
+       
+    
+    }
+    
+    .columnas:nth-child(2), .columnas:nth-child(3){
+        flex-basis: 100%;
+    }
+}

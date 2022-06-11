@@ -1,0 +1,24 @@
+
+
+<app-menu></app-menu>
+
+
+
+
+<div id="route" class="route">
+    <p *ngIf="this.loginDatosService.sesion == true"></p>
+    <router-outlet></router-outlet>
+</div>
+
+<div id="divbutton">
+    <div class="cbr_botton">
+        <button class="cybr-btn" (click)="goHeader()">
+            Menu<span aria-hidden>_</span>
+            <span class="cybr-btn__glitch">Menu_</span>
+        </button>
+    </div>
+</div>
+
+
+
+

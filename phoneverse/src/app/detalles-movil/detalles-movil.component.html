@@ -1,0 +1,41 @@
+
+
+<img id="imagenCarrusel" src="./assets/movil/{{  this.imagenVisibleAhora }}" alt="">
+
+<br>
+
+<div id="botones">
+    <button class="btn_cerrar_sesion" (click)="anteriorImagen();">Anterior</button>
+    <button class="btn_cerrar_sesion" (click)="siguienteImagen();">Siguiente</button>
+</div>
+
+
+<div class="datosmovil">
+
+    <p>
+        <b>Procesador:</b> {{ detallesMovilJson.procesador }} 
+    </p>
+    
+    <p>        
+        <b>Memoria ram:</b> {{ detallesMovilJson.ram }}GB            
+    </p>
+    
+    <p>
+        <b>Almacenamiento:</b> {{ detallesMovilJson.almacenamiento }}GB
+    </p>
+
+    <p>
+        <b>Color:</b> {{ detallesMovilJson.color }}             
+    </p>
+    
+    <p>
+        <b>Precio:</b> {{ detallesMovilJson.precio }}€               
+    </p>    
+
+</div>
+
+<button class="btn_cerrar_sesion" id="boton_comprar" (click)="comprar();">Comprar</button>
+
+<!--
+<button (click)="comprar();">Comprar</button>
+-->
